@@ -1,42 +1,34 @@
 {
   "project_info": {
-    "project_number": "305842708206",
-    "firebase_url": "https://movement-c0242.firebaseio.com",
-    "project_id": "movement-c0242",
-    "storage_bucket": "movement-c0242.appspot.com"
+    "project_number": "326783372549",
+    "firebase_url": "https://movement-b1700.firebaseio.com",
+    "project_id": "movement-b1700",
+    "storage_bucket": "movement-b1700.appspot.com"
   },
   "client": [
     {
       "client_info": {
-        "mobilesdk_app_id": "1:305842708206:android:eac227ac25d009e9099dff",
+        "mobilesdk_app_id": "1:326783372549:android:f39fb274963832a6b67b6c",
         "android_client_info": {
-          "package_name": "com.example.movement"
+          "package_name": "com.dbs.movement"
         }
       },
       "oauth_client": [
         {
-          "client_id": "305842708206-b26ak05ffm26o8qvt5tpmbevg97njsr1.apps.googleusercontent.com",
-          "client_type": 1,
-          "android_info": {
-            "package_name": "com.example.movement",
-            "certificate_hash": "ead2cc3035932168127a80eac7128300b1f7ecc8"
-          }
-        },
-        {
-          "client_id": "305842708206-uglpgti2ajvaedqpimufg5mbjld0ua93.apps.googleusercontent.com",
+          "client_id": "326783372549-1rtrir0opu0kume81nvhnbte3bgbmct9.apps.googleusercontent.com",
           "client_type": 3
         }
       ],
       "api_key": [
         {
-          "current_key": "AIzaSyB9bZV7dooLYK9CBiLhoC9Eg_OUOorwhQY"
+          "current_key": "AIzaSyD9-XXlmEUliBIQTNPUspDszMoMuPYaIwY"
         }
       ],
       "services": {
         "appinvite_service": {
           "other_platform_oauth_client": [
             {
-              "client_id": "305842708206-uglpgti2ajvaedqpimufg5mbjld0ua93.apps.googleusercontent.com",
+              "client_id": "326783372549-1rtrir0opu0kume81nvhnbte3bgbmct9.apps.googleusercontent.com",
               "client_type": 3
             }
           ]

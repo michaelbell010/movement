@@ -1,4 +1,4 @@
-package com.example.movement;
+package com.dbs.movement;
 
 import org.junit.Test;
 

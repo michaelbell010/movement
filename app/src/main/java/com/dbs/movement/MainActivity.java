@@ -32,6 +32,7 @@ public class MainActivity extends AppCompatActivity {
         emailId = findViewById(R.id.editText2);
         password = findViewById(R.id.editText);
         btnSignUp = findViewById(R.id.button);
+        tvSignIn = findViewById(R.id.textView);
         btnSignUp.setOnClickListener(view -> {
             String email = emailId.getText().toString();
             String pwd = password.getText().toString();
@@ -63,5 +64,13 @@ public class MainActivity extends AppCompatActivity {
                 Toast.makeText(MainActivity.this, "Error Ocurred!", Toast.LENGTH_SHORT).show();
             }
         });
+
+
+        tvSignIn.setOnClickListener(view -> {
+            Intent i = new Intent( MainActivity.this, LoginActivity.class);
+            startActivity(i);
+        });
     }
+
+
 }

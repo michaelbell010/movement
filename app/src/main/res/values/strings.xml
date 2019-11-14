@@ -1,9 +1,6 @@
 <resources>
 
-    <string name="app_name">RecyclerView</string>
-    <string name="title_placeholder">Title</string>
-    <string name="news_placeholder">News</string>
-    <string name="sports_info_placeholder">Here is some news</string>
-    <string name="empty_screen">We do not have anything\nhere right now. Please Retry</string>
-    <string name="btn_retry">Retry</string>
+    <string name="app_name">Gatherings</string>
+    <string name="description_event_Politics">Change who is running your country</string>
+    <string name="description_event_Laws">Help shape the society you live</string>
 </resources>

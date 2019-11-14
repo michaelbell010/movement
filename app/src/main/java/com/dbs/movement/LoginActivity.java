@@ -29,7 +29,7 @@ public class LoginActivity extends AppCompatActivity {
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_main);
+        setContentView(R.layout.activity_signup);
 
         mFirebaseAuth = FirebaseAuth.getInstance();
         emailId = findViewById(R.id.editText2);
@@ -71,7 +71,7 @@ public class LoginActivity extends AppCompatActivity {
                 mFirebaseAuth.signInWithEmailAndPassword(email, pwd).addOnCompleteListener(LoginActivity.this, task -> {
 
                     if (!task.isSuccessful())
-                        Toast.makeText(LoginActivity.this, "Login Error, Plesae Login Again", Toast.LENGTH_SHORT).show();
+                        Toast.makeText(LoginActivity.this, "Login Error, Please Login Again", Toast.LENGTH_SHORT).show();
 
                     else {
                         Intent intToHome = new Intent(LoginActivity.this, HomeActivity.class);
@@ -86,7 +86,7 @@ public class LoginActivity extends AppCompatActivity {
         tvSignUp.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                Intent intSignUp = new Intent(LoginActivity.this, MainActivity.class);
+                Intent intSignUp = new Intent(LoginActivity.this, SignupActivity.class);
                 startActivity(intSignUp);
             }
         });

@@ -35,7 +35,7 @@ public class LoginActivity extends AppCompatActivity {
         emailId = findViewById(R.id.editText2);
         password = findViewById(R.id.editText);
         btnSignIn = findViewById(R.id.button);
-        tvSignUp = findViewById(R.id.textView);
+        tvSignUp = findViewById(R.id.textview);
 
         mAuthStateListener = new FirebaseAuth.AuthStateListener() {
             FirebaseUser mFirebaseUser = mFirebaseAuth.getCurrentUser();
@@ -47,7 +47,7 @@ public class LoginActivity extends AppCompatActivity {
                     Intent i = new Intent(LoginActivity.this, HomeActivity.class);
                     startActivity(i);
                 } else {
-                    Toast.makeText(LoginActivity.this, "Please Login", Toast.LENGTH_SHORT).show();
+                    Toast.makeText(LoginActivity.this, "Please Log In", Toast.LENGTH_SHORT).show();
                 }
 
             }

@@ -1,6 +1,10 @@
 <resources>
 
     <string name="app_name">Gatherings</string>
-    <string name="description_event_Politics">Change who is running your country</string>
-    <string name="description_event_Laws">Help shape the society you live</string>
+    <string name="description_event_Politics">Lorem IpsomLorem IpsomLorem IpsomLorem IpsomLorem IpsomLorem IpsomLorem IpsomLorem IpsomLorem IpsomLorem IpsomLorem IpsomLorem IpsomLorem IpsomLorem Ipsom</string>
+    <string name="description_event_Laws">HLorem IpsomLorem IpsomLorem IpsomLorem IpsomLorem IpsomLorem IpsomLorem IpsomLorem IpsomLorem IpsomLorem IpsomLorem IpsomLorem IpsomLorem Ipsome</string>
+    <string name="description_event_Protest">HLorem IpsomLorem IpsomLorem IpsomLorem IpsomLorem IpsomLorem IpsomLorem IpsomLorem IpsomLorem IpsomLorem IpsomLorem IpsomLorem IpsomLorem Ipsome</string>
+
+    <string name="navigation_drawer_open">Open navigation drawer</string>
+    <string name="navigation_drawer_close">Close navigation drawer</string>
 </resources>

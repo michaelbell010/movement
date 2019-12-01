@@ -32,7 +32,7 @@ public class SignupActivity extends AppCompatActivity {
         emailId = findViewById(R.id.editText2);
         password = findViewById(R.id.editText);
         btnSignUp = findViewById(R.id.button);
-        tvSignIn = findViewById(R.id.textView);
+        tvSignIn = findViewById(R.id.textview);
         btnSignUp.setOnClickListener(view -> {
             String email = emailId.getText().toString();
             String pwd = password.getText().toString();

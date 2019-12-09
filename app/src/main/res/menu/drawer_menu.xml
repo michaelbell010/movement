@@ -9,9 +9,9 @@
             android:icon="@drawable/ic_information"
             android:title="Message" />
         <item
-            android:id="@+id/nav_email"
+            android:id="@+id/nav_kyr"
             android:icon="@drawable/ic_email"
-            android:title="Email" />
+            android:title="Know Your Rights" />
         <item
             android:id="@+id/nav_event"
             android:icon="@drawable/ic_event"

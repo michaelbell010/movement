@@ -5,6 +5,7 @@ import androidx.appcompat.app.AppCompatActivity;
 import android.content.Intent;
 import android.os.Bundle;
 import android.os.Handler;
+import android.widget.Toast;
 
 public class Splash extends AppCompatActivity {
 
@@ -13,6 +14,7 @@ public class Splash extends AppCompatActivity {
     @Override
     public void onCreate(Bundle icicle) {
 
+        getSupportActionBar().hide();
         super.onCreate(icicle);
         setContentView(R.layout.activity_splash);
 
@@ -24,5 +26,7 @@ public class Splash extends AppCompatActivity {
                 Splash.this.finish();
             }
         }, SPLASH_DISPLAY_LENGTH);
+
+
     }
 }

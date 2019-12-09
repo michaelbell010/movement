@@ -10,13 +10,11 @@ import androidx.recyclerview.widget.RecyclerView;
 import androidx.appcompat.widget.Toolbar;
 
 
-import android.content.Context;
 import android.content.Intent;
 import android.os.Bundle;
 import android.view.MenuItem;
 import android.view.View;
 import android.widget.Button;
-import android.widget.GridLayout;
 import android.widget.Toast;
 
 
@@ -28,6 +26,7 @@ import java.util.List;
 
 public class HomeActivity extends AppCompatActivity implements NavigationView.OnNavigationItemSelectedListener {
 
+    private RecyclerView mRecyclerView;
     private DrawerLayout drawer;
     Button btnLogout;
     FirebaseAuth mFirebaseAuth;
@@ -41,8 +40,11 @@ public class HomeActivity extends AppCompatActivity implements NavigationView.On
 
 
 
+
         Toolbar toolbar = findViewById(R.id.toolbar);
         setSupportActionBar(toolbar);
+        getSupportActionBar().setTitle("Movement");
+
 
         drawer = findViewById(R.id.drawer_layout);
 
@@ -57,14 +59,10 @@ public class HomeActivity extends AppCompatActivity implements NavigationView.On
 
         if (savedInstanceState == null) {
             getSupportFragmentManager().beginTransaction().replace(R.id.fragment_container,
-                    new EmailFragment()).commit();
+                    new KnowYourRightsFragment()).commit();
 
-            navigationView.setCheckedItem(R.id.nav_email);
+            navigationView.setCheckedItem(R.id.nav_kyr);
         }
-
-
-
-
 
         btnLogout = findViewById(R.id.logout);
 
@@ -84,7 +82,7 @@ public class HomeActivity extends AppCompatActivity implements NavigationView.On
 
 
         mToolbar = findViewById(R.id.toolbar);
-        mToolbar.setTitle(getResources().getString(R.string.app_name));
+
         mRecyclerView = findViewById(R.id.recyclerview);
         GridLayoutManager mGridLayoutManager = new GridLayoutManager(HomeActivity.this, 2);
         mRecyclerView.setLayoutManager(mGridLayoutManager);
@@ -116,9 +114,9 @@ public class HomeActivity extends AppCompatActivity implements NavigationView.On
     @Override
     public boolean onNavigationItemSelected(@NonNull MenuItem menuItem) {
         switch (menuItem.getItemId()) {
-            case R.id.nav_email:
+            case R.id.nav_kyr:
                 getSupportFragmentManager().beginTransaction().replace(R.id.fragment_container,
-                        new EmailFragment()).commit();
+                        new KnowYourRightsFragment()).commit();
                 break;
             case R.id.nav_event:
                 getSupportFragmentManager().beginTransaction().replace(R.id.fragment_container,
@@ -132,9 +130,13 @@ public class HomeActivity extends AppCompatActivity implements NavigationView.On
             case R.id.nav_share:
                 Toast.makeText(this, "Share", Toast.LENGTH_SHORT).show();
 
+                break;
+
             case R.id.nav_send:
                 Toast.makeText(this, "Send", Toast.LENGTH_SHORT).show();
         }
+
+        drawer.closeDrawer(GravityCompat.START);
         return true;
     }
 

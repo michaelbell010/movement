@@ -1,10 +1,20 @@
 <resources>
 
-    <string name="app_name">Gatherings</string>
+    <string name="app_name">Movement</string>
     <string name="description_event_Politics">Lorem IpsomLorem IpsomLorem IpsomLorem IpsomLorem IpsomLorem IpsomLorem IpsomLorem IpsomLorem IpsomLorem IpsomLorem IpsomLorem IpsomLorem IpsomLorem Ipsom</string>
     <string name="description_event_Laws">HLorem IpsomLorem IpsomLorem IpsomLorem IpsomLorem IpsomLorem IpsomLorem IpsomLorem IpsomLorem IpsomLorem IpsomLorem IpsomLorem IpsomLorem Ipsome</string>
     <string name="description_event_Protest">HLorem IpsomLorem IpsomLorem IpsomLorem IpsomLorem IpsomLorem IpsomLorem IpsomLorem IpsomLorem IpsomLorem IpsomLorem IpsomLorem IpsomLorem Ipsome</string>
 
     <string name="navigation_drawer_open">Open navigation drawer</string>
     <string name="navigation_drawer_close">Close navigation drawer</string>
+    <string name="event_fragment1">Event Fragment</string>
+    <string name="event_fragment2">Event Fragment</string>
+    <string name="event_fragment3">Event Fragment</string>
+    <string name="event_fragment4">Event Fragment</string>
+
+    <string name="date">Date</string>
+    <string name="time">location</string>
+    <string name="location">time</string>
+    <string name="type">type</string>
+
 </resources>

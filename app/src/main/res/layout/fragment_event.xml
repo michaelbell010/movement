@@ -10,10 +10,10 @@
 
     <Button
         android:id="@+id/btnOpen"
-        android:layout_width="wrap_content"
+        android:layout_width="0dp"
         android:layout_height="wrap_content"
-        android:layout_marginStart="192dp"
-        android:layout_marginTop="440dp"
+        android:layout_marginStart="108dp"
+        android:layout_marginTop="368dp"
         android:text="Open Event Creator"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />

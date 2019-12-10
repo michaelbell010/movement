@@ -36,11 +36,6 @@ public class HomeActivity extends AppCompatActivity implements NavigationView.On
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_home);
-
-
-
-
-
         Toolbar toolbar = findViewById(R.id.toolbar);
         setSupportActionBar(toolbar);
         getSupportActionBar().setTitle("Movement");
@@ -57,12 +52,14 @@ public class HomeActivity extends AppCompatActivity implements NavigationView.On
         toggle.syncState();
 
 
+/*
         if (savedInstanceState == null) {
             getSupportFragmentManager().beginTransaction().replace(R.id.fragment_container,
                     new KnowYourRightsFragment()).commit();
 
             navigationView.setCheckedItem(R.id.nav_kyr);
         }
+*/
 
         btnLogout = findViewById(R.id.logout);
 

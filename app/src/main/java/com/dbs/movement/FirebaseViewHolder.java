@@ -47,6 +47,7 @@ public class FirebaseViewHolder extends RecyclerView.ViewHolder{
         TextView mPostDesc = mview.findViewById(R.id.post_desc);
         ImageView mImage = mview.findViewById(R.id.post_image);
         TextView mPostTitle = mview.findViewById(R.id.post_title);
+
         mPostDesc.setText(desc);
         mPostTitle.setText(title);
         Picasso.get().load(image).into(mImage);

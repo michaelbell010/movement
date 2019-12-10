@@ -7,45 +7,72 @@
     tools:context=".DetailActivity">
 
 
+    <Button
+        android:id="@+id/button4"
+        android:layout_width="158dp"
+        android:layout_height="48dp"
+        android:layout_marginStart="24dp"
+        android:layout_marginEnd="43dp"
+        android:layout_marginBottom="64dp"
+        android:text="Add to Calendar"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toStartOf="@+id/button3"
+        app:layout_constraintHorizontal_bias="0.085"
+        app:layout_constraintStart_toStartOf="parent" />
+
     <androidx.appcompat.widget.Toolbar
         android:id="@+id/toolbar"
         android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_marginBottom="676dp"
-        android:background="?attr/colorAccent"
+        android:layout_height="76dp"
+        android:layout_marginBottom="564dp"
+        android:background="?attr/colorPrimary"
         android:minHeight="?attr/actionBarSize"
         android:theme="?attr/actionBarTheme"
         app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintHorizontal_bias="1.0"
+        app:layout_constraintHorizontal_bias="0.0"
         app:layout_constraintLeft_toLeftOf="parent"
         app:layout_constraintRight_toRightOf="parent"
-        app:popupTheme="@style/ThemeOverlay.AppCompat.Light"
-        app:theme="@style/ThemeOverlay.AppCompat.Dark" />
+        app:popupTheme="@style/ThemeOverlay.AppCompat.ActionBar"
+        app:theme="@style/ThemeOverlay.AppCompat.Light" />
 
     <ImageView
         android:id="@+id/ivImage"
-        android:layout_width="334dp"
+        android:layout_width="match_parent"
         android:layout_height="263dp"
         android:layout_gravity="center"
-        android:layout_marginBottom="316dp"
+        android:layout_marginTop="32dp"
+        android:layout_marginBottom="396dp"
         android:src="@drawable/politics"
         app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintHorizontal_bias="0.493"
+        app:layout_constraintHorizontal_bias="0.0"
         app:layout_constraintLeft_toLeftOf="parent"
-        app:layout_constraintRight_toRightOf="parent" />
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/toolbar"
+        app:layout_constraintVertical_bias="0.25" />
 
     <TextView
         android:id="@+id/tvDescription"
-        android:layout_width="402dp"
-        android:layout_height="177dp"
-        android:layout_marginBottom="60dp"
-        android:gravity="center"
+        android:layout_width="match_parent"
+        android:layout_height="141dp"
+        android:layout_marginTop="24dp"
+        android:layout_marginBottom="168dp"
+        android:gravity="left"
         android:padding="5dp"
         android:text="TextView"
         android:textSize="18sp"
         app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintHorizontal_bias="0.32"
         app:layout_constraintLeft_toLeftOf="parent"
-        app:layout_constraintRight_toRightOf="parent" />
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/ivImage" />
+
+    <Button
+        android:id="@+id/button3"
+        android:layout_width="158dp"
+        android:layout_height="48dp"
+        android:layout_marginEnd="16dp"
+        android:layout_marginBottom="64dp"
+        android:text="Bookmark"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>

@@ -69,6 +69,8 @@ public class HomeActivity extends AppCompatActivity implements NavigationView.On
                 FirebaseAuth.getInstance().signOut();
                 Intent intToMain = new Intent(HomeActivity.this, LoginActivity.class);
                 startActivity(intToMain);
+                finish();
+                Toast.makeText(HomeActivity.this,"Logged Out",Toast.LENGTH_SHORT).show();
             }
         });
 
@@ -85,21 +87,21 @@ public class HomeActivity extends AppCompatActivity implements NavigationView.On
         mRecyclerView.setLayoutManager(mGridLayoutManager);
 
         mEventlist = new ArrayList<>();
-        mEventData = new EventData("Politics", getString(R.string.description_event_Politics), R.drawable.politics);
+        mEventData = new EventData("Politics", getString(R.string.description_event_Politics), R.drawable.ballotbox);
         mEventlist.add(mEventData);
         mEventData = new EventData("Laws", getString(R.string.description_event_Laws), R.drawable.law);
         mEventlist.add(mEventData);
         mEventData = new EventData("Protest", getString(R.string.description_event_Protest), R.drawable.law);
         mEventlist.add(mEventData);
-        mEventData = new EventData("Politics", getString(R.string.description_event_Protest), R.drawable.politics);
+        mEventData = new EventData("Politics", getString(R.string.description_event_Protest), R.drawable.ballotbox);
         mEventlist.add(mEventData);
         mEventData = new EventData("Politics", getString(R.string.description_event_Protest), R.drawable.law);
         mEventlist.add(mEventData);
-        mEventData = new EventData("Politics", getString(R.string.description_event_Protest), R.drawable.politics);
+        mEventData = new EventData("Politics", getString(R.string.description_event_Protest), R.drawable.ballotbox);
         mEventlist.add(mEventData);
-        mEventData = new EventData("Politics", getString(R.string.description_event_Protest), R.drawable.protest);
+        mEventData = new EventData("Politics", getString(R.string.description_event_Protest), R.drawable.protester);
         mEventlist.add(mEventData);
-        mEventData = new EventData("Politics", getString(R.string.description_event_Protest), R.drawable.politics);
+        mEventData = new EventData("Politics", getString(R.string.description_event_Protest), R.drawable.ballotbox);
         mEventlist.add(mEventData);
 
         MyAdapter myAdapter = new MyAdapter(HomeActivity.this, mEventlist);
@@ -122,6 +124,10 @@ public class HomeActivity extends AppCompatActivity implements NavigationView.On
             case R.id.nav_info:
                 getSupportFragmentManager().beginTransaction().replace(R.id.fragment_container,
                         new InformationFragment()).commit();
+                break;
+            case R.id.nav_bookmarks:
+                getSupportFragmentManager().beginTransaction().replace(R.id.fragment_container,
+                        new BookmarksFragment()).commit();
                 break;
 
             case R.id.nav_share:

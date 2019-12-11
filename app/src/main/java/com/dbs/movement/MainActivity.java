@@ -6,14 +6,16 @@ import android.os.Bundle;
 import android.provider.CalendarContract;
 import android.text.TextUtils;
 import android.view.View;
+import android.widget.AdapterView;
 import android.widget.Button;
 import android.widget.EditText;
+import android.widget.Spinner;
 import android.widget.Toast;
 
 import com.google.firebase.database.DatabaseReference;
 import com.google.firebase.database.FirebaseDatabase;
 
-public class MainActivity extends AppCompatActivity {
+public class MainActivity extends AppCompatActivity implements AdapterView.OnItemSelectedListener{
 
     private EditText date,location,time,type,image,title,desc;
     private Button createEvent;
@@ -24,13 +26,17 @@ public class MainActivity extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
+        Spinner type_spinner = findViewById(R.id.type_spinner);
+        type_spinner.setOnItemSelectedListener(this);
+        getSupportActionBar().hide();
 
         databaseReference = FirebaseDatabase.getInstance().getReference("Events");
 
         date = (EditText)findViewById(R.id.date);
         location = (EditText)findViewById(R.id.location);
         time = (EditText)findViewById(R.id.time);
-        type = (EditText)findViewById(R.id.type);
+        desc = (EditText)findViewById(R.id.desc);
+        title = (EditText)findViewById(R.id.title);
         createEvent = (Button) findViewById(R.id.createEvent);
 
 
@@ -71,5 +77,16 @@ public class MainActivity extends AppCompatActivity {
         else {
             Toast.makeText(MainActivity.this, "Please Type Event Information",Toast.LENGTH_LONG).show();
         }
+    }
+
+    @Override
+    public void onItemSelected(AdapterView<?> parent, View view, int position, long id) {
+        Toast.makeText(this, parent.getSelectedItem().toString(), Toast.LENGTH_SHORT).show();
+
+    }
+
+    @Override
+    public void onNothingSelected(AdapterView<?> parent) {
+
     }
 }

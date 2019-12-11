@@ -8,28 +8,12 @@
     tools:context=".MainActivity">
 
 
-    <androidx.appcompat.widget.Toolbar
-        android:id="@+id/toolbar"
-        android:layout_width="364dp"
-        android:layout_height="78dp"
-        android:layout_marginBottom="560dp"
-        android:background="?attr/colorPrimary"
-        android:minHeight="?attr/actionBarSize"
-        android:theme="?attr/actionBarTheme"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintHorizontal_bias="1.0"
-        app:layout_constraintLeft_toLeftOf="parent"
-        app:layout_constraintRight_toRightOf="parent"
-        app:popupTheme="@style/ThemeOverlay.AppCompat.ActionBar"
-        app:theme="@style/ThemeOverlay.AppCompat.Light" />
-
-
     <EditText
         android:id="@+id/date"
         android:layout_width="150dp"
         android:layout_height="wrap_content"
-        android:layout_marginStart="92dp"
-        android:layout_marginTop="164dp"
+        android:layout_marginStart="20dp"
+        android:layout_marginTop="96dp"
         android:hint="Date"
         android:textColor="@color/black"
         android:textColorHint="@color/black"
@@ -39,14 +23,31 @@
 
     <EditText
         android:id="@+id/location"
-        android:layout_width="150dp"
-        android:layout_height="wrap_content"
-        android:layout_marginStart="92dp"
-        android:layout_marginTop="228dp"
+        android:layout_width="320dp"
+        android:layout_height="45dp"
+        android:layout_marginStart="20dp"
+        android:layout_marginTop="220dp"
+        android:layout_marginEnd="20dp"
         android:hint="Location"
         android:textColor="@color/black"
         android:textColorHint="@color/black"
         android:textSize="18sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <EditText
+        android:id="@+id/organiser"
+        android:layout_width="320dp"
+        android:layout_height="45dp"
+        android:layout_marginStart="20dp"
+        android:layout_marginTop="156dp"
+        android:layout_marginEnd="20dp"
+        android:hint="Organiser"
+        android:textColor="@color/black"
+        android:textColorHint="@color/black"
+        android:textSize="18sp"
+        app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
 
@@ -54,8 +55,8 @@
         android:id="@+id/time"
         android:layout_width="150dp"
         android:layout_height="wrap_content"
-        android:layout_marginStart="92dp"
-        android:layout_marginTop="296dp"
+        android:layout_marginStart="188dp"
+        android:layout_marginTop="96dp"
         android:hint="Time"
         android:textColor="@color/black"
         android:textColorHint="@color/black"
@@ -63,16 +64,39 @@
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
 
+    <Spinner
+        android:id="@+id/type_spinner"
+        android:layout_width="320dp"
+        android:layout_height="49dp"
+        android:layout_marginStart="20dp"
+        android:layout_marginTop="276dp"
+        android:layout_marginEnd="20dp"
+        android:background="#00D18181"
+        android:entries="@array/event_type"
+
+        android:tooltipText="Type"
+        app:layout_constraintEnd_toEndOf="parent"
+
+        app:layout_constraintHorizontal_bias="1.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
     <EditText
-        android:id="@+id/type"
-        android:layout_width="150dp"
-        android:layout_height="wrap_content"
-        android:layout_marginStart="92dp"
-        android:layout_marginTop="364dp"
-        android:hint="Type"
+        android:id="@+id/desc"
+        android:layout_width="320dp"
+        android:layout_height="128dp"
+        android:layout_marginStart="20dp"
+        android:layout_marginTop="344dp"
+        android:layout_marginEnd="20dp"
+        android:layout_marginBottom="96dp"
+        android:hint="Description"
         android:textColor="@color/black"
+
         android:textColorHint="@color/black"
         android:textSize="18sp"
+        app:layout_constraintBottom_toTopOf="@+id/createEvent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
 
@@ -80,12 +104,10 @@
         android:id="@+id/createEvent"
         android:layout_width="133dp"
         android:layout_height="wrap_content"
-        android:layout_marginStart="100dp"
-        android:layout_marginTop="94dp"
-        android:layout_marginBottom="112dp"
+        android:layout_marginStart="112dp"
+        android:layout_marginBottom="24dp"
         android:text="Create Event"
         app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/type" />
+        app:layout_constraintStart_toStartOf="parent" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>

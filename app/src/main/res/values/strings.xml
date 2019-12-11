@@ -12,6 +12,20 @@
     <string name="event_fragment3">Event Fragment</string>
     <string name="event_fragment4">Event Fragment</string>
 
+    <string-array name="event_type">
+        <item>Arts and Culture</item>
+        <item>Anti Racism</item>
+        <item>Climate</item>
+        <item>Crime</item>
+        <item>Economic</item>
+        <item>Environment</item>
+        <item>Health</item>
+        <item>Housing</item>
+        <item>Planning</item>
+        <item>Social Justice</item>
+        <item>Workers Rights</item>
+    </string-array>
+
     <string name="date">Date</string>
     <string name="time">location</string>
     <string name="location">time</string>

@@ -50,7 +50,7 @@ public class FirebaseEvents extends AppCompatActivity {
         firebaseRecyclerAdapter = new FirebaseRecyclerAdapter<Event, FirebaseViewHolder>(options) {
             @Override
             protected void onBindViewHolder(@NonNull FirebaseViewHolder holder, int position, @NonNull Event event) {
-             holder.setDetails(getApplicationContext(),event.getImage(),event.getTitle(),event.getType(),event.getDate(), event.getDesc());
+                holder.setDetails(getApplicationContext(),event.getTitle(),event.getType(),event.getDate(), event.getDesc());
             }
 
             @NonNull
@@ -59,21 +59,21 @@ public class FirebaseEvents extends AppCompatActivity {
 
                 View itemView = LayoutInflater.from(parent.getContext()).inflate(R.layout.event_list_view,parent, false);
 
-                 FirebaseViewHolder firebaseViewHolder = new FirebaseViewHolder(itemView);
-                 firebaseViewHolder.setClickListener(new FirebaseViewHolder.ClickListener() {
-                  @Override
-                  public void onItemClick(View view, int position) {
+                FirebaseViewHolder firebaseViewHolder = new FirebaseViewHolder(itemView);
+                firebaseViewHolder.setClickListener(new FirebaseViewHolder.ClickListener() {
+                    @Override
+                    public void onItemClick(View view, int position) {
 
-                      Toast.makeText(FirebaseEvents.this, "HELLO", Toast.LENGTH_SHORT).show();
-                  }
+                        Toast.makeText(FirebaseEvents.this, "HELLO", Toast.LENGTH_SHORT).show();
+                    }
 
-                  @Override
-                  public void onItemLongClick(View view, int position) {
+                    @Override
+                    public void onItemLongClick(View view, int position) {
 
-                      Toast.makeText(FirebaseEvents.this, "Long Click", Toast.LENGTH_LONG).show();
+                        Toast.makeText(FirebaseEvents.this, "Long Click", Toast.LENGTH_LONG).show();
 
-                  }
-              });
+                    }
+                });
 
                 return firebaseViewHolder;
             }

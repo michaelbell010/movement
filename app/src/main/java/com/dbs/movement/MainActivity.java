@@ -20,7 +20,7 @@ import java.util.ArrayList;
 
 public class MainActivity extends AppCompatActivity implements AdapterView.OnItemSelectedListener{
 
-    private EditText date,location,time,title,desc,organiser,image;
+    private EditText date,location,time,title,desc,organiser;
     private Spinner type;
     private Button createEvent;
 
@@ -39,11 +39,12 @@ public class MainActivity extends AppCompatActivity implements AdapterView.OnIte
         date = (EditText)findViewById(R.id.date);
         location = (EditText)findViewById(R.id.location);
         time = (EditText)findViewById(R.id.time);
+        type = (Spinner) findViewById(R.id.type_spinner);
         desc = (EditText)findViewById(R.id.desc);
         title = (EditText)findViewById(R.id.title);
         createEvent = (Button) findViewById(R.id.createEvent);
         organiser = (EditText) findViewById(R.id.organiser);
-        type = (Spinner) findViewById(R.id.type_spinner);
+
 
         createEvent.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -55,7 +56,7 @@ public class MainActivity extends AppCompatActivity implements AdapterView.OnIte
         Bundle bundle = getIntent().getExtras();
         if(bundle != null) {
             if(bundle.getString("Some") !=null){
-            Toast.makeText(getApplicationContext(),"DATA:" + bundle.getString("Some"),Toast.LENGTH_LONG).show();
+                Toast.makeText(getApplicationContext(),"DATA:" + bundle.getString("Some"),Toast.LENGTH_LONG).show();
             }
         }
     }
@@ -65,15 +66,15 @@ public class MainActivity extends AppCompatActivity implements AdapterView.OnIte
         String eventLocation = location.getText().toString();
         String eventTime = time.getText().toString();
         String eventType = type.getAdapter().toString();
-        String eventTitle = title.getText().toString();
         String eventDesc = desc.getText().toString();
+        String eventTitle = title.getText().toString();
         String eventOrganiser = organiser.getText().toString();
-        String eventImage = image.getText().toString();
+
 
         if(!TextUtils.isEmpty(eventDate) && !TextUtils.isEmpty(eventLocation) && !TextUtils.isEmpty(eventTime)){
 
             String id = databaseReference.push().getKey();
-            Event event = new Event(eventDate,eventLocation,eventTime,eventType,eventDesc,eventTitle,id,eventOrganiser,eventImage);
+            Event event = new Event(id,eventDate,eventLocation,eventTime,eventType,eventDesc,eventTitle,eventOrganiser);
             databaseReference.child(id).setValue(event);
             date.setText("");
             location.setText("");
@@ -82,6 +83,7 @@ public class MainActivity extends AppCompatActivity implements AdapterView.OnIte
             desc.setText("");
             title.setText("");
             organiser.setText("");
+
 
         }
         else {

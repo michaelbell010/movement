@@ -13,12 +13,12 @@ public class Event {
     private String Desc;
     private String Title;
     private String Organiser;
-    private String Image;
+
 
     public Event() {
     }
 
-    public Event(String date, String location, String time, String type,String desc, String title, String eventID, String organiser, String image) {
+    public Event(String date, String location, String time, String type,String desc, String title,String organiser,String eventID ) {
 
         this.Date = date;
         this.Location = location;
@@ -26,9 +26,8 @@ public class Event {
         this.Type = type;
         this.Desc = desc;
         this.Title = title;
-        this.EventID = eventID;
         this.Organiser = organiser;
-        this.Image = image;
+        this.EventID = eventID;
     }
 
     public String getDate() {
@@ -96,12 +95,5 @@ public class Event {
         Organiser = organiser;
     }
 
-    public String getImage() {
-        return Image;
-    }
-
-    public void setImage(String image) {
-        Image = image;
-    }
 
 }

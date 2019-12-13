@@ -9,12 +9,11 @@
 
     <TextView
         android:id="@+id/textView"
-        android:layout_width="367dp"
-        android:layout_height="426dp"
+        android:layout_width="359dp"
+        android:layout_height="111dp"
         android:layout_marginTop="212dp"
         android:text="Activism is one of the cornerstones of a democracy. When people make their voices heard, they can bring about real change in our society."
-        android:textAlignment="center"
-        android:textSize="22sp"
+        android:textSize="18sp"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
 
@@ -29,6 +28,18 @@
         app:layout_constraintTop_toTopOf="parent"
         app:layout_constraintVertical_bias="0.0"
         app:srcCompat="@mipmap/protest" />
+
+    <ScrollView
+        android:layout_width="360dp"
+        android:layout_height="312dp"
+        tools:layout_editor_absoluteX="-4dp"
+        tools:layout_editor_absoluteY="325dp">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical" />
+    </ScrollView>
 
 
 </androidx.constraintlayout.widget.ConstraintLayout>

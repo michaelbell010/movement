@@ -9,9 +9,9 @@
 
     <TextView
         android:id="@+id/textView"
-        android:layout_width="367dp"
-        android:layout_height="426dp"
-        android:layout_marginTop="212dp"
+        android:layout_width="355dp"
+        android:layout_height="295dp"
+        android:layout_marginTop="100dp"
         android:text="Activism is one of the cornerstones of a democracy. When people make their voices heard, they can bring about real change in our society."
         android:textAlignment="center"
         android:textSize="22sp"

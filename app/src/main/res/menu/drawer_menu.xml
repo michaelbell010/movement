@@ -29,12 +29,12 @@
             <item
                 android:id="@+id/nav_share"
                 android:icon="@drawable/ic_share"
-                android:title="Share" />
+                android:title="Logout" />
 
             <item
                 android:id="@+id/nav_send"
                 android:icon="@drawable/ic_send"
-                android:title="Send" />
+                android:title="Contact Us" />
 
         </menu>
     </item>

@@ -1,0 +1,40 @@
+{
+  "project_info": {
+    "project_number": "326783372549",
+    "firebase_url": "https://movement-b1700.firebaseio.com",
+    "project_id": "movement-b1700",
+    "storage_bucket": "movement-b1700.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:326783372549:android:f39fb274963832a6b67b6c",
+        "android_client_info": {
+          "package_name": "com.dbs.movement"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "326783372549-1rtrir0opu0kume81nvhnbte3bgbmct9.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyD9-XXlmEUliBIQTNPUspDszMoMuPYaIwY"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "326783372549-1rtrir0opu0kume81nvhnbte3bgbmct9.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

@@ -59,7 +59,6 @@ public class HomeActivity extends AppCompatActivity implements NavigationView.On
         if (savedInstanceState == null) {
             getSupportFragmentManager().beginTransaction().replace(R.id.fragment_container,
                     new KnowYourRightsFragment()).commit();
-
             navigationView.setCheckedItem(R.id.nav_kyr);
         }
 */
@@ -149,7 +148,7 @@ public class HomeActivity extends AppCompatActivity implements NavigationView.On
     @Override
     public void onBackPressed(){
         if (drawer.isDrawerOpen(GravityCompat.START)) {
-               drawer.closeDrawer(GravityCompat.START);
+            drawer.closeDrawer(GravityCompat.START);
         } else {
             super.onBackPressed();
         }
@@ -168,4 +167,3 @@ public class HomeActivity extends AppCompatActivity implements NavigationView.On
         unregisterReceiver(bcReceiver);
     }
 }
-

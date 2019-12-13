@@ -43,18 +43,18 @@ public class FirebaseViewHolder extends RecyclerView.ViewHolder{
     private static void onClick(View v) {
     }
 
-    public void setDetails(Context ctx,String desc, String type, String title, String date, String image){
+    public void setDetails(Context ctx,String desc, String type, String title, String date){
         TextView mPostDesc = mview.findViewById(R.id.post_desc);
         TextView mPostType = mview.findViewById(R.id.post_type);
         TextView mPostTitle = mview.findViewById(R.id.post_title);
         TextView mPostDate = mview.findViewById(R.id.post_date);
-        ImageView mPostImage = mview.findViewById(R.id.post_image);
+
 
         mPostDesc.setText(desc);
         mPostTitle.setText(title);
         mPostDate.setText(date);
         mPostType.setText(type);
-        Picasso.get().load(image).into(mPostImage);
+
 
 
     }

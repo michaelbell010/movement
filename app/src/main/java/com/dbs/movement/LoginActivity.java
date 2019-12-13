@@ -9,6 +9,7 @@ import android.util.Log;
 import android.view.View;
 import android.widget.Button;
 import android.widget.EditText;
+import android.widget.TextClock;
 import android.widget.TextView;
 import android.widget.Toast;
 
@@ -18,12 +19,14 @@ import com.google.android.gms.tasks.Task;
 import com.google.firebase.auth.AuthResult;
 import com.google.firebase.auth.FirebaseAuth;
 import com.google.firebase.auth.FirebaseUser;
+import com.google.firebase.internal.InternalTokenProvider;
 
 public class LoginActivity extends AppCompatActivity {
 
     EditText emailId, password;
     Button btnSignIn;
     TextView tvSignUp;
+    TextView forgotpassword;
     FirebaseAuth mFirebaseAuth;
     private FirebaseAuth.AuthStateListener mAuthStateListener;
     @Override
@@ -38,6 +41,7 @@ public class LoginActivity extends AppCompatActivity {
         password = findViewById(R.id.editText);
         btnSignIn = findViewById(R.id.button);
         tvSignUp = findViewById(R.id.textview);
+        forgotpassword = (TextView) findViewById(R.id.forgotpassword);
 
         mAuthStateListener = new FirebaseAuth.AuthStateListener() {
             FirebaseUser mFirebaseUser = mFirebaseAuth.getCurrentUser();
@@ -55,6 +59,15 @@ public class LoginActivity extends AppCompatActivity {
             }
 
         };
+        forgotpassword.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                startActivity(new Intent(LoginActivity.this, ResetPassword.class));
+
+            }
+        });
+
+
         btnSignIn.setOnClickListener(view -> {
             String email = emailId.getText().toString();
             String pwd = password.getText().toString();

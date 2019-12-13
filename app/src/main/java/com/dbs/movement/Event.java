@@ -1,5 +1,7 @@
 package com.dbs.movement;
 
+import android.media.Image;
+
 public class Event {
 
 
@@ -7,24 +9,26 @@ public class Event {
     private String Location;
     private String Time;
     private String Type;
-    private String Image;
     private String EventID;
     private String Desc;
     private String Title;
+    private String Organiser;
+    private String Image;
 
     public Event() {
     }
 
-    public Event(String date, String location, String time, String type,String image,String desc, String title, String eventID) {
+    public Event(String date, String location, String time, String type,String desc, String title, String eventID, String organiser, String image) {
 
         this.Date = date;
         this.Location = location;
         this.Time = time;
         this.Type = type;
-        this.Image = image;
         this.Desc = desc;
         this.Title = title;
         this.EventID = eventID;
+        this.Organiser = organiser;
+        this.Image = image;
     }
 
     public String getDate() {
@@ -68,14 +72,6 @@ public class Event {
         EventID = eventID;
     }
 
-    public String getImage() {
-        return Image;
-    }
-
-    public void setImage(String image) {
-        Image = image;
-    }
-
     public String getDesc() {
         return Desc;
     }
@@ -90,6 +86,22 @@ public class Event {
 
     public void setTitle(String title) {
         Title = title;
+    }
+
+    public String getOrganiser() {
+        return Organiser;
+    }
+
+    public void setOrganiser(String organiser) {
+        Organiser = organiser;
+    }
+
+    public String getImage() {
+        return Image;
+    }
+
+    public void setImage(String image) {
+        Image = image;
     }
 
 }

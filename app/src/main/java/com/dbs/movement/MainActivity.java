@@ -7,6 +7,7 @@ import android.provider.CalendarContract;
 import android.text.TextUtils;
 import android.view.View;
 import android.widget.AdapterView;
+import android.widget.ArrayAdapter;
 import android.widget.Button;
 import android.widget.EditText;
 import android.widget.Spinner;
@@ -15,9 +16,12 @@ import android.widget.Toast;
 import com.google.firebase.database.DatabaseReference;
 import com.google.firebase.database.FirebaseDatabase;
 
+import java.util.ArrayList;
+
 public class MainActivity extends AppCompatActivity implements AdapterView.OnItemSelectedListener{
 
-    private EditText date,location,time,type,image,title,desc;
+    private EditText date,location,time,title,desc,organiser,image;
+    private Spinner type;
     private Button createEvent;
 
     DatabaseReference databaseReference;
@@ -38,7 +42,8 @@ public class MainActivity extends AppCompatActivity implements AdapterView.OnIte
         desc = (EditText)findViewById(R.id.desc);
         title = (EditText)findViewById(R.id.title);
         createEvent = (Button) findViewById(R.id.createEvent);
-
+        organiser = (EditText) findViewById(R.id.organiser);
+        type = (Spinner) findViewById(R.id.type_spinner);
 
         createEvent.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -59,20 +64,25 @@ public class MainActivity extends AppCompatActivity implements AdapterView.OnIte
         String eventDate = date.getText().toString();
         String eventLocation = location.getText().toString();
         String eventTime = time.getText().toString();
-        String eventType = type.getText().toString();
-        String eventImage = image.getText().toString();
+        String eventType = type.getAdapter().toString();
         String eventTitle = title.getText().toString();
         String eventDesc = desc.getText().toString();
+        String eventOrganiser = organiser.getText().toString();
+        String eventImage = image.getText().toString();
 
-        if(!TextUtils.isEmpty(eventDate) && !TextUtils.isEmpty(eventLocation) && !TextUtils.isEmpty(eventTime) && !TextUtils.isEmpty(eventType)){
+        if(!TextUtils.isEmpty(eventDate) && !TextUtils.isEmpty(eventLocation) && !TextUtils.isEmpty(eventTime)){
 
             String id = databaseReference.push().getKey();
-            Event event = new Event(eventDate,eventLocation,eventTime,eventType, id, eventImage,eventDesc, eventTitle);
+            Event event = new Event(eventDate,eventLocation,eventTime,eventType,eventDesc,eventTitle,id,eventOrganiser,eventImage);
             databaseReference.child(id).setValue(event);
             date.setText("");
             location.setText("");
             time.setText("");
-            type.setText("");
+            type.getSelectedItemPosition();
+            desc.setText("");
+            title.setText("");
+            organiser.setText("");
+
         }
         else {
             Toast.makeText(MainActivity.this, "Please Type Event Information",Toast.LENGTH_LONG).show();

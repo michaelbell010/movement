@@ -50,7 +50,7 @@ public class FirebaseEvents extends AppCompatActivity {
         firebaseRecyclerAdapter = new FirebaseRecyclerAdapter<Event, FirebaseViewHolder>(options) {
             @Override
             protected void onBindViewHolder(@NonNull FirebaseViewHolder holder, int position, @NonNull Event event) {
-             holder.setDetails(getApplicationContext(),event.getImage(),event.getTitle(),event.getType());
+             holder.setDetails(getApplicationContext(),event.getImage(),event.getTitle(),event.getType(),event.getDate(), event.getDesc());
             }
 
             @NonNull

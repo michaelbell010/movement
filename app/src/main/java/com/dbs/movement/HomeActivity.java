@@ -11,6 +11,8 @@ import androidx.appcompat.widget.Toolbar;
 
 
 import android.content.Intent;
+import android.content.IntentFilter;
+import android.net.ConnectivityManager;
 import android.os.Bundle;
 import android.view.MenuItem;
 import android.view.View;
@@ -31,6 +33,7 @@ public class HomeActivity extends AppCompatActivity implements NavigationView.On
     Button btnLogout;
     FirebaseAuth mFirebaseAuth;
     private FirebaseAuth.AuthStateListener mAuthStatemListener;
+    BcReceiver bcReceiver = new BcReceiver();
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -150,6 +153,19 @@ public class HomeActivity extends AppCompatActivity implements NavigationView.On
         } else {
             super.onBackPressed();
         }
+    }
+
+    @Override
+    protected void onStart() {
+        super.onStart();
+        IntentFilter filter = new IntentFilter(ConnectivityManager.CONNECTIVITY_ACTION);
+        registerReceiver(bcReceiver, filter);
+    }
+
+    @Override
+    protected void onStop (){
+        super.onStop();
+        unregisterReceiver(bcReceiver);
     }
 }
 
